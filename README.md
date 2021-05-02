@@ -2,10 +2,11 @@
 
 Inventory management system is a application which is used to track record of the items that area currently available in the store. The application is build using html, css, js, php and mysql. The frontend is developed using html, css and js and Php and mysql is used for the backed logic and storing the data. Ajax is used for sending the response in no time and displaying the output without refreshing the page.
 
-There are multiple functionality like-
+We can perform CRUD functionality-
 1. Searching through the database for an Item
 2. Adding new items in the database
 3. Updating the item (Name and quantity)
+4. Delete the item
 
 ## Output screenshots
 Here are various screenshots of the output
