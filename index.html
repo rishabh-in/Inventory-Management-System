@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Supermarket</title>
+</head>
+
+<body>
+
+  <!-- navbar section -->
+
+    <nav class="navbar bg-dark navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#"><span>Supermarket</span> Management System</a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#search-section">Search Item</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#addItem-section">Add Item</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#edit-section">Edit Items</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+  <!-- Search seaction-->
+
+  <section id="search-section">
+    <div class="row">
+      <div class="col-4"></div>
+
+      <div class="col-4">
+        <h3 class='title'>Search Item</h3>
+
+        <input class="form-control" type="text" name="search" placeholder="Search" id="search" />
+
+        <div class="col" id="result">
+
+        </div>
+      </div>
+      <div class="col-4"></div>
+    </div><br><br>
+  </section>
+
+
+
+  <!-- Add item section -->
+
+  <section id="addItem-section">
+    <h3 class="title">Add Item</h3>
+    <form id="add-item-form" action='add_item.php' method='post'>
+      <div class="row">
+        <div class="col-3"></div>
+
+        <div class="col-3">
+          <input type="text" class="form-control add-item-input" name='item-name' placeholder="Item Name" required>
+        </div>
+        <div class="col-3">
+          <input type="number" class="form-control item-quantity-input" name='item-quantity' placeholder="Quantity" required>
+        </div>
+
+        <div class="col-3"></div>
+      </div>
+      <input type="button" class="btn btn-primary mb-2 add-item-btn" value='Add Item' >
+
+      <div class="add-info">
+        
+        
+      </div>
+    </form>
+
+  </section>
+
+
+  <!-- View and edit section -->
+
+  <section id="edit-section">
+    <h3 class="title">Edit Items</h3>
+    <div class="card-title">Click on the item to update</div>
+    <div class="row">
+      <div class="col-7">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Item</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+
+          <tbody id="show-items"></tbody>
+        </table>
+      </div>
+
+      <div class="col-5">
+        <p class="bg-success" id="update-feedback"></p>
+        <p class="bg-danger" id="delete-feedback"></p>
+
+        <div id="form-container">
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
